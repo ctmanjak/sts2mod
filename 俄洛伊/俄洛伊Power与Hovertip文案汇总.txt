@@ -1,0 +1,158 @@
+俄洛伊 Power 与 Hovertip 文案汇总
+
+说明：
+- 本文件汇总俄洛伊模组自定义 power 与隐藏 hovertip 的中英文文案。
+- “隐藏 Hovertip”本质上也是 PowerModel，但不会作为战斗状态显示，只用于卡牌或遗物的额外说明。
+- 文案来源：Illaoi/assets/localization/zhs/powers.json 与 Illaoi/assets/localization/eng/powers.json。
+
+隐藏 Hovertip
+
+ILLAOI_GROW_TIP_POWER
+中文标题：生长
+中文描述：每生长1，都会生成1根[gold]触手[/gold]。
+英文标题：Grow
+英文描述：Each point of Grow creates 1 [gold]Tentacle[/gold].
+
+ILLAOI_TENTACLE_TIP_POWER
+中文标题：触手
+中文描述：触手不会行动。被[gold]命令[/gold]时会攻击指定目标，基础伤害为[blue]3[/blue]，并受到[gold]信仰[/gold]加成。
+英文标题：Tentacle
+英文描述：Tentacles do not act. When [gold]Commanded[/gold], they strike the chosen target for [blue]3[/blue] base damage plus [gold]Faith[/gold].
+
+ILLAOI_COMMAND_TIP_POWER
+中文标题：命令
+中文描述：命令所有[gold]触手[/gold]攻击指定目标。每只触手造成[blue]3[/blue]点基础伤害，并受到[gold]信仰[/gold]加成。
+英文标题：Command
+英文描述：Command all [gold]Tentacles[/gold] to strike the chosen target. Each Tentacle deals [blue]3[/blue] base damage plus [gold]Faith[/gold].
+
+可见 Power
+
+ILLAOI_SOUL_LINK_POWER
+中文标题：灵魂
+中文描述：没有意图，不会行动。受到伤害时，将伤害传递给本体。
+英文标题：Soul
+英文描述：Has no intent and does not act. When damaged, transfers that damage to its body.
+
+ILLAOI_HUSK_POWER
+中文标题：躯壳
+中文描述：玩家回合结束时，所有触手自动攻击拥有躯壳的单位。层数表示持续回合数。
+中文智能描述：玩家回合结束时，所有触手自动攻击拥有躯壳的单位，持续[blue]{Amount}[/blue]回合。
+英文标题：Husk
+英文描述：At the end of the player's turn, all Tentacles automatically strike units with Husk. Stacks show remaining turns.
+英文智能描述：At the end of the player's turn, all Tentacles automatically strike units with Husk. Lasts [blue]{Amount}[/blue] turns.
+
+ILLAOI_TEMPORARY_STRENGTH_POWER
+中文标题：临时力量
+中文描述：获得力量。你的回合结束时，失去等量力量。
+中文智能描述：获得[blue]{Amount}[/blue]点力量。你的回合结束时，失去等量力量。
+英文标题：Temporary Strength
+英文描述：Gain Strength. At the end of your turn, lose that much Strength.
+英文智能描述：Gain [blue]{Amount}[/blue] Strength. At the end of your turn, lose that much Strength.
+
+ILLAOI_TEMPORARY_DEXTERITY_POWER
+中文标题：临时敏捷
+中文描述：获得敏捷。你的回合结束时，失去等量敏捷。
+中文智能描述：获得[blue]{Amount}[/blue]点敏捷。你的回合结束时，失去等量敏捷。
+英文标题：Temporary Dexterity
+英文描述：Gain Dexterity. At the end of your turn, lose that much Dexterity.
+英文智能描述：Gain [blue]{Amount}[/blue] Dexterity. At the end of your turn, lose that much Dexterity.
+
+ILLAOI_FAITH_POWER
+中文标题：信仰
+中文描述：触手造成的伤害提高，数值等于信仰层数。
+中文智能描述：触手造成的伤害提高[blue]{Amount}[/blue]点。
+英文标题：Faith
+英文描述：Tentacles deal additional damage equal to Faith.
+英文智能描述：Tentacles deal [blue]{Amount}[/blue] additional damage.
+
+ILLAOI_DRAIN_POWER
+中文标题：汲取
+中文描述：每当触手攻击拥有躯壳的单位时，获得格挡，数值等于汲取层数。
+中文智能描述：每当触手攻击拥有躯壳的单位时，获得[blue]{Amount}[/blue]点格挡。
+英文标题：Drain
+英文描述：Whenever a Tentacle attacks a unit with Husk, gain Block equal to Drain.
+英文智能描述：Whenever a Tentacle attacks a unit with Husk, gain [blue]{Amount}[/blue] Block.
+
+ILLAOI_ANCIENT_GOD_PROPHET_POWER
+中文标题：古神先知
+中文描述：每回合第一次命令时，获得[gold]信仰[/gold]，数值等于层数。
+中文智能描述：每回合第一次命令时，获得[blue]{Amount}[/blue]点[gold]信仰[/gold]。
+英文标题：Ancient God Prophet
+英文描述：The first time you Command each turn, gain [gold]Faith[/gold] equal to this power.
+英文智能描述：The first time you Command each turn, gain [blue]{Amount}[/blue] [gold]Faith[/gold].
+
+ILLAOI_SOUL_IMPACT_POWER
+中文标题：断魂震击
+中文描述：击碎怪物灵魂时，击晕怪物本体。若本体已经眩晕，则使其获得[blue]2[/blue]层虚弱和[blue]2[/blue]层易伤。
+英文标题：Soulquake
+英文描述：Whenever you shatter a monster's Soul, stun its body. If the body is already stunned, apply [blue]2[/blue] Weak and [blue]2[/blue] Vulnerable to it.
+
+ILLAOI_NAGAKABOUROS_DESCENDS_POWER
+中文标题：娜伽卡波洛丝降临
+中文描述：每回合第一次扯出灵魂时，命令触手攻击该灵魂。
+英文标题：Nagakabouros Descends
+英文描述：The first time each turn you pull out a Soul, command Tentacles to strike that Soul.
+
+ILLAOI_TIDECALLER_POWER
+中文标题：潮声使者
+中文描述：每回合第一次命令时，抽牌，数量等于层数。
+中文智能描述：每回合第一次命令时，抽[blue]{Amount}[/blue]张牌。
+英文标题：Tide Herald
+英文描述：The first time you Command each turn, draw cards equal to this power.
+英文智能描述：The first time you Command each turn, draw [blue]{Amount}[/blue] card.
+
+ILLAOI_RELENTLESS_FAITH_POWER
+中文标题：不灭信念
+中文描述：每回合前若干次打出攻击牌并指定目标后，命令触手攻击该目标。次数等于层数。
+中文智能描述：每回合你前[blue]{Amount}[/blue]次打出攻击牌并指定目标后，命令触手攻击该目标。
+英文标题：Unyielding Faith
+英文描述：Each turn, the first times you play an Attack with a target, command Tentacles to strike that target. The number of times equals this power.
+英文智能描述：The first [blue]{Amount}[/blue] time each turn you play an Attack with a target, command Tentacles to strike that target.
+
+ILLAOI_GROWTH_BLOCK_POWER
+中文标题：深海祭司
+中文描述：每当你生长时，每生长[blue]1[/blue]，获得[gold]信仰[/gold]，数值等于层数。
+中文智能描述：每当你生长时，每生长[blue]1[/blue]，获得[blue]{Amount}[/blue]点[gold]信仰[/gold]。
+英文标题：Deep Priestess
+英文描述：Whenever you Grow, gain [gold]Faith[/gold] equal to this power for each Tentacle grown.
+英文智能描述：Whenever you Grow, gain [blue]{Amount}[/blue] [gold]Faith[/gold] for each Tentacle grown.
+
+ILLAOI_RHYTHM_OF_MOTION_POWER
+中文标题：潮行节律
+中文描述：每回合第一次打出技能牌后，获得临时敏捷，数值等于层数。
+中文智能描述：每回合第一次打出技能牌后，获得[blue]{Amount}[/blue]点临时敏捷。
+英文标题：Tide Rhythm
+英文描述：The first time you play a Skill each turn, gain temporary Dexterity equal to this power.
+英文智能描述：The first time you play a Skill each turn, gain [blue]{Amount}[/blue] temporary Dexterity.
+
+ILLAOI_FERVOR_OF_MOTION_POWER
+中文标题：狂潮热忱
+中文描述：每回合第一次打出攻击牌后，获得临时力量，数值等于层数。
+中文智能描述：每回合第一次打出攻击牌后，获得[blue]{Amount}[/blue]点临时力量。
+英文标题：Tide Fervor
+英文描述：The first time you play an Attack each turn, gain temporary Strength equal to this power.
+英文智能描述：The first time you play an Attack each turn, gain [blue]{Amount}[/blue] temporary Strength.
+
+ILLAOI_WATCHFUL_IDOL_POWER
+中文标题：守望神像
+中文描述：每回合第一次获得临时敏捷时，获得格挡，数值等于层数。
+中文智能描述：每回合第一次获得临时敏捷时，获得[blue]{Amount}[/blue]点格挡。
+英文标题：Vigil Idol
+英文描述：The first time you gain temporary Dexterity each turn, gain Block equal to this power.
+英文智能描述：The first time you gain temporary Dexterity each turn, gain [blue]{Amount}[/blue] Block.
+
+ILLAOI_SEA_ANSWERS_POWER
+中文标题：海之回应
+中文描述：击碎怪物灵魂时，获得等同于层数的能量。
+中文智能描述：击碎怪物[gold]灵魂[/gold]时，获得{Amount:energyIcons()}。
+英文标题：The Sea Replies
+英文描述：Whenever you shatter a monster's Soul, gain Energy equal to this power.
+英文智能描述：Whenever you shatter a monster's [gold]Soul[/gold], gain {Amount:energyIcons()}.
+
+ILLAOI_NEXT_TURN_DRAW_POWER
+中文标题：备魂
+中文描述：下回合开始时，额外抽牌，数量等于层数。
+中文智能描述：下回合开始时，额外抽[blue]{Amount}[/blue]张牌。
+英文标题：Soul Readiness
+英文描述：At the start of your next turn, draw additional cards equal to this power.
+英文智能描述：At the start of your next turn, draw [blue]{Amount}[/blue] additional card.

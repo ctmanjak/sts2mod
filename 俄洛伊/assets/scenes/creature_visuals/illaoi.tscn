@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/Core/Nodes/Combat/NCreatureVisuals.cs" id="1"]
+
+[node name="IllaoiCreatureVisuals" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Visuals" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -210)
+scale = Vector2(0.78, 0.78)
+
+[node name="Bounds" type="Control" parent="."]
+unique_name_in_owner = true
+offset_left = -175.0
+offset_top = -440.0
+offset_right = 175.0
+offset_bottom = 10.0
+
+[node name="IntentPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -440)
+
+[node name="CenterPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -220)
+
+[node name="OrbPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -360)
+
+[node name="TalkPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(60, -420)

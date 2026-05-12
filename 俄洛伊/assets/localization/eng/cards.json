@@ -1,0 +1,167 @@
+{
+  "ILLAOI_STRIKE.title": "Strike",
+  "ILLAOI_STRIKE.description": "Deal {Damage:diff()} damage.",
+
+  "ILLAOI_DEFEND.title": "Defend",
+  "ILLAOI_DEFEND.description": "Gain {Block:diff()} Block.",
+
+  "SOUL_TRIAL.title": "Test of Spirit",
+  "SOUL_TRIAL.description": "Pull out the enemy's [gold]Soul[/gold] for {Turns:diff()} turns.",
+
+  "TEMPLE_IDOL.title": "Raise Idol",
+  "TEMPLE_IDOL.description": "Gain {TemporaryDexterity:diff()} temporary Dexterity.\nGain {Block:diff()} Block {Times:diff()} times.",
+
+  "BUHRU_FOOTWORK.title": "Tide-Treader",
+  "BUHRU_FOOTWORK.description": "Gain {Block:diff()} Block {Times:diff()} times.\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
+
+  "SERMON_OF_MOTION.title": "Sermon of Momentum",
+  "SERMON_OF_MOTION.description": "Gain {TemporaryStrength:diff()} temporary Strength.\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
+
+  "LOW_SWEEP.title": "Low Sweep",
+  "LOW_SWEEP.description": "Deal {Damage:diff()} damage {Times:diff()} times.",
+
+  "GUARDED_ADVANCE.title": "Braced Advance",
+  "GUARDED_ADVANCE.description": "Deal {Damage:diff()} damage {Times:diff()} times.\nGain {Block:diff()} Block {Times:diff()} times.",
+
+  "TIDAL_SLASH.title": "Tidecut",
+  "TIDAL_SLASH.description": "Deal {Damage:diff()} damage {Times:diff()} times.\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
+
+  "RESTLESS_CURRENT.title": "Restless Current",
+  "RESTLESS_CURRENT.description": "Draw {Cards:diff()} {Cards:plural:card|cards}, then discard {Discard:diff()} {Discard:plural:card|cards}.\nWhen you discard an Attack, gain {TemporaryStrength:diff()} temporary Strength.\nWhen you discard a Skill, gain {TemporaryDexterity:diff()} temporary Dexterity.",
+
+  "WATCHFUL_IDOL.title": "Vigil Idol",
+  "WATCHFUL_IDOL.description": "The first time you gain temporary Dexterity each turn, gain {Block:diff()} Block.",
+
+  "SPIRIT_MARK.title": "Soulbrand",
+  "SPIRIT_MARK.description": "Apply {Husk:diff()} [gold]Husk[/gold] to all non-[gold]Soul[/gold] enemies.\nAll [gold]Souls[/gold] last {SoulTurns:diff()} more turns and gain {Husk:diff()} [gold]Husk[/gold].",
+
+  "GRASPING_LESSON.title": "Admonish",
+  "GRASPING_LESSON.description": "Deal {Damage:diff()} damage.\n[gold]Command[/gold].",
+
+  "CONSECRATED_GROUND.title": "Consecrated Ground",
+  "CONSECRATED_GROUND.description": "Gain {Block:diff()} Block.\nFor each Tentacle, gain {BonusBlock:diff()} additional Block.",
+
+  "HARSH_SERMON.title": "Soul Judgment",
+  "HARSH_SERMON.description": "Deal {Damage:diff()} damage.\nConsume all [gold]Husk[/gold] on the target.\nFor each [blue]1[/blue] consumed, deal {BonusDamage:diff()} additional damage.",
+
+  "FOLLOW_MY_VOICE.title": "Heed the Call",
+  "FOLLOW_MY_VOICE.description": "[gold]Command[/gold].\nIf the target has [gold]Husk[/gold], [gold]Command[/gold] {BonusCommands:diff()} additional time.",
+
+  "BUHRU_MEDITATION.title": "Buhru Trance",
+  "BUHRU_MEDITATION.description": "Gain {Block:diff()} Block.\nNext turn, gain {Energy:energyIcons()}.",
+
+  "CRUSHING_WAVE.title": "Crushing Wave",
+  "CRUSHING_WAVE.description": "Deal {Damage:diff()} damage and [gold]Command[/gold].\nIf the target has [gold]Husk[/gold], [gold]Command[/gold] again.",
+
+  "TENTACLE_SLAM.title": "Tentacle Slam",
+  "TENTACLE_SLAM.description": "Deal {Damage:diff()} damage to all enemies.",
+
+  "PRIESTESS_GUARD.title": "Priestess Ward",
+  "PRIESTESS_GUARD.description": "Gain {TemporaryStrength:diff()} temporary Strength.\nDeal {Damage:diff()} damage and apply {WeakPower:diff()} Weak.",
+
+  "IDOL_RECALL.title": "Idol Echo",
+  "IDOL_RECALL.description": "Deal {Damage:diff()} damage.\nDraw {Cards:diff()} {Cards:plural:card|cards}, then discard {Discard:diff()} {Discard:plural:card|cards}.",
+
+  "TRIAL_DANCE.title": "Dance of Trial",
+  "TRIAL_DANCE.description": "Deal {Damage:diff()} damage {Times:diff()} times.\nIf the target has [gold]Husk[/gold], draw {Cards:diff()} {Cards:plural:card|cards}.",
+
+  "GUARD_BREAKING_WAVE.title": "Armor-Splitting Tide",
+  "GUARD_BREAKING_WAVE.description": "Deal {Damage:diff()} damage {Times:diff()} times.\nAfter each hit, apply {Husk:diff()} [gold]Husk[/gold].",
+
+  "SURGING_SERMON.title": "Surging Homily",
+  "SURGING_SERMON.description": "Gain {TemporaryStrength:diff()} temporary Strength and {TemporaryDexterity:diff()} temporary Dexterity.",
+
+  "LINE_BREAKER.title": "Linebreaker",
+  "LINE_BREAKER.description": "Deal {Damage:diff()} damage {Times:diff()} times.\n[gold]Command[/gold] {Commands:diff()} time.",
+
+  "DEEP_MEDITATION.title": "Abyssal Trance",
+  "DEEP_MEDITATION.description": "Gain {Block:diff()} Block {Times:diff()} times.\nNext turn, gain {Faith:diff()} [gold]Faith[/gold].",
+
+  "RHYTHM_OF_MOTION.title": "Tide Rhythm",
+  "RHYTHM_OF_MOTION.description": "The first time you play a Skill each turn, gain {TemporaryDexterity:diff()} temporary Dexterity.",
+
+  "FERVOR_OF_MOTION.title": "Tide Fervor",
+  "FERVOR_OF_MOTION.description": "The first time you play an Attack each turn, gain {TemporaryStrength:diff()} temporary Strength.",
+
+  "WOUNDED_VESSEL.title": "Cracked Vessel",
+  "WOUNDED_VESSEL.description": "Pull out the enemy's [gold]Soul[/gold] for {Turns:diff()} turns.\nApply {WeakPower:diff()} Weak to the body.",
+
+  "IDOL_WARD.title": "Idol Shelter",
+  "IDOL_WARD.description": "Gain {Block:diff()} Block.\nGain {Faith:diff()} [gold]Faith[/gold].",
+
+  "VESSEL_CRACK.title": "Crack the Vessel",
+  "VESSEL_CRACK.description": "Apply {VulnerablePower:diff()} Vulnerable.\nIf the target is a [gold]Soul[/gold], its body also gains {VulnerablePower:diff()} Vulnerable.",
+
+  "SPIRIT_LASH.title": "Soul Lash",
+  "SPIRIT_LASH.description": "Deal {Damage:diff()} damage.\nIf the target has [gold]Husk[/gold], [gold]Command[/gold].",
+
+  "MOTION_OF_NAGAKABOUROS.title": "Tide of Nagakabouros",
+  "MOTION_OF_NAGAKABOUROS.description": "[gold]Grow[/gold] {Tentacles:diff()}.\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
+
+  "OVERSTEPPING_FAITH.title": "Overstepping Faith",
+  "OVERSTEPPING_FAITH.description": "Deal {Damage:diff()} damage to all enemies.\nFor each enemy, [gold]Grow[/gold] {Tentacles:diff()}.",
+
+  "SPIRITUAL_PREPARATION.title": "Soul Rite",
+  "SPIRITUAL_PREPARATION.description": "Gain {Block:diff()} Block {Times:diff()} times.\nIf there is a [gold]Soul[/gold], gain {Energy:energyIcons()} next turn and draw {Cards:diff()} {Cards:plural:card|cards}.",
+
+  "PROPHET_OF_NAGAKABOUROS.title": "Deep Oracle",
+  "PROPHET_OF_NAGAKABOUROS.description": "[gold]Grow[/gold] {Tentacles:diff()}.\nGain {Faith:diff()} [gold]Faith[/gold].",
+
+  "LEAP_OF_FAITH.title": "Faith's Retort",
+  "LEAP_OF_FAITH.description": "Deal {Damage:diff()} damage.\nIf you have [gold]Faith[/gold], [gold]Command[/gold].",
+
+  "TIDECALLER.title": "Tide Herald",
+  "TIDECALLER.description": "The first time you [gold]Command[/gold] each turn, draw {Cards:diff()} {Cards:plural:card|cards}.",
+
+  "DRAIN.title": "Drain",
+  "DRAIN.description": "Whenever a [gold]Tentacle[/gold] attacks a unit with [gold]Husk[/gold], gain {Block:diff()} Block.",
+
+  "RELENTLESS_FAITH.title": "Unyielding Faith",
+  "RELENTLESS_FAITH.description": "The first time each turn you play a targeted Attack, [gold]Command[/gold].",
+
+  "KRAKEN_PRIESTESS.title": "Deep Priestess",
+  "KRAKEN_PRIESTESS.description": "Whenever you [gold]Grow[/gold], gain {Faith:diff()} [gold]Faith[/gold] for each Tentacle grown.",
+
+  "HARROWING_SERMON.title": "Harrowing Rebuke",
+  "HARROWING_SERMON.description": "Pull out the enemy's [gold]Soul[/gold] for {Turns:diff()} turns.\nApply {VulnerablePower:diff()} Vulnerable to the [gold]Soul[/gold].",
+
+  "NAGAKABOUROS_RISING.title": "God-Tide Rising",
+  "NAGAKABOUROS_RISING.description": "Deal {Damage:diff()} damage to all enemies.\n[gold]Command[/gold] against all enemies with [gold]Husk[/gold].",
+
+  "ANCIENT_GOD_PROPHET.title": "Ancient God Prophet",
+  "ANCIENT_GOD_PROPHET.description": "When played, [gold]Grow[/gold] {Tentacles:diff()}.\nAfterward, the first time you [gold]Command[/gold] each turn, gain {Faith:diff()} [gold]Faith[/gold].",
+
+  "SOUL_IMPACT.title": "Soulquake",
+  "SOUL_IMPACT.description": "Whenever you shatter a monster's [gold]Soul[/gold], stun its body.\nIf the body is already stunned, apply [blue]2[/blue] Weak and [blue]2[/blue] Vulnerable to it.",
+
+  "TRIAL_BY_MOTION.title": "Trial by Tide",
+  "TRIAL_BY_MOTION.description": "Gain {StrengthPower:diff()} Strength and {DexterityPower:diff()} Dexterity.\n[gold]Grow[/gold] {Tentacles:diff()}.",
+
+  "SERPENT_DANCE.title": "Serpent Dance",
+  "SERPENT_DANCE.description": "Gain {Energy:energyIcons()}.\nDraw {Cards:diff()} {Cards:plural:card|cards}, then discard {Discard:diff()} {Discard:plural:card|cards}.",
+
+  "UNDERTOW.title": "Undertow",
+  "UNDERTOW.description": "Deal {Damage:diff()} damage to all enemies {Times:diff()} times.",
+
+  "VOICE_OF_THE_DEEP.title": "Voice of the Deep",
+  "VOICE_OF_THE_DEEP.description": "[gold]Command[/gold] {Commands:diff()} times.\nIf the target has [gold]Husk[/gold], gain {Faith:diff()} [gold]Faith[/gold].",
+
+  "THE_SEA_ANSWERS.title": "The Sea Replies",
+  "THE_SEA_ANSWERS.description": "Gain {Faith:diff()} [gold]Faith[/gold].\nWhenever you shatter a monster's [gold]Soul[/gold], gain {Energy:energyIcons()}.",
+
+  "DIVINE_FORM.title": "Divine Form",
+  "DIVINE_FORM.description": "At the start of your turn, gain {Faith:diff()} [gold]Faith[/gold] and [gold]Grow[/gold] {Tentacles:diff()}.",
+
+  "RAGING_TIDE.title": "Raging Tide",
+  "RAGING_TIDE.description": "[gold]Command[/gold] [blue]X[/blue]+{Commands:diff()} times.",
+
+  "REND_SOUL.title": "Rend Soul",
+  "REND_SOUL.description": "Pull out [blue]X[/blue] [gold]Souls[/gold] from the enemy for {Turns:diff()} turns.",
+  "REND_SOUL.upgradedDescription": "Pull out [blue]X[/blue]+{BonusSouls:diff()} [gold]Souls[/gold] from the enemy for {Turns:diff()} turns.",
+
+  "TRIAL_OF_THE_ANCIENT_GOD.title": "Rebuke",
+  "TRIAL_OF_THE_ANCIENT_GOD.description": "Deal {Damage:diff()} damage.\n[gold]Command[/gold].\nIf the target is a [gold]Soul[/gold], also [gold]Command[/gold] against its body.",
+
+  "NAGAKABOUROS_DESCENDS.title": "Nagakabouros Descends",
+  "NAGAKABOUROS_DESCENDS.description": "[gold]Grow[/gold] {Tentacles:diff()}.\nThe first time each turn you pull out a [gold]Soul[/gold], [gold]Command[/gold] against that Soul."
+}

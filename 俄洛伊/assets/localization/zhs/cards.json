@@ -1,0 +1,167 @@
+{
+  "ILLAOI_STRIKE.title": "打击",
+  "ILLAOI_STRIKE.description": "造成{Damage:diff()}点伤害。",
+
+  "ILLAOI_DEFEND.title": "防御",
+  "ILLAOI_DEFEND.description": "获得{Block:diff()}点格挡。",
+
+  "SOUL_TRIAL.title": "灵魂试炼",
+  "SOUL_TRIAL.description": "扯出敌人的[gold]灵魂[/gold]，持续{Turns:diff()}回合。",
+
+  "TEMPLE_IDOL.title": "立像",
+  "TEMPLE_IDOL.description": "获得{TemporaryDexterity:diff()}点临时敏捷。\n获得{Block:diff()}点格挡{Times:diff()}次。",
+
+  "BUHRU_FOOTWORK.title": "踏潮步",
+  "BUHRU_FOOTWORK.description": "获得{Block:diff()}点格挡{Times:diff()}次。\n抽{Cards:diff()}张牌。",
+
+  "SERMON_OF_MOTION.title": "动势布道",
+  "SERMON_OF_MOTION.description": "获得{TemporaryStrength:diff()}点临时力量。\n抽{Cards:diff()}张牌。",
+
+  "LOW_SWEEP.title": "低扫",
+  "LOW_SWEEP.description": "造成{Damage:diff()}点伤害{Times:diff()}次。",
+
+  "GUARDED_ADVANCE.title": "稳步前压",
+  "GUARDED_ADVANCE.description": "造成{Damage:diff()}点伤害{Times:diff()}次。\n获得{Block:diff()}点格挡{Times:diff()}次。",
+
+  "TIDAL_SLASH.title": "逐潮斩",
+  "TIDAL_SLASH.description": "造成{Damage:diff()}点伤害{Times:diff()}次。\n抽{Cards:diff()}张牌。",
+
+  "RESTLESS_CURRENT.title": "不息暗流",
+  "RESTLESS_CURRENT.description": "抽{Cards:diff()}张牌，弃{Discard:diff()}张牌。\n弃掉攻击牌时，获得{TemporaryStrength:diff()}点临时力量。\n弃掉技能牌时，获得{TemporaryDexterity:diff()}点临时敏捷。",
+
+  "WATCHFUL_IDOL.title": "守望神像",
+  "WATCHFUL_IDOL.description": "每回合第一次获得临时敏捷时，获得{Block:diff()}点格挡。",
+
+  "SPIRIT_MARK.title": "魂印",
+  "SPIRIT_MARK.description": "所有非[gold]灵魂[/gold]敌人获得{Husk:diff()}层[gold]躯壳[/gold]。\n所有[gold]灵魂[/gold]持续时间+{SoulTurns:diff()}，并获得{Husk:diff()}层[gold]躯壳[/gold]。",
+
+  "GRASPING_LESSON.title": "训诫",
+  "GRASPING_LESSON.description": "造成{Damage:diff()}点伤害。\n[gold]命令[/gold]。",
+
+  "CONSECRATED_GROUND.title": "圣域",
+  "CONSECRATED_GROUND.description": "获得{Block:diff()}点格挡。\n每有一条触手，额外获得{BonusBlock:diff()}点格挡。",
+
+  "HARSH_SERMON.title": "裂魂审判",
+  "HARSH_SERMON.description": "造成{Damage:diff()}点伤害。\n消耗目标所有[gold]躯壳[/gold]。\n每消耗[blue]1[/blue]层，额外造成{BonusDamage:diff()}点伤害。",
+
+  "FOLLOW_MY_VOICE.title": "循声而至",
+  "FOLLOW_MY_VOICE.description": "[gold]命令[/gold]。\n若目标拥有[gold]躯壳[/gold]，额外[gold]命令[/gold]{BonusCommands:diff()}次。",
+
+  "BUHRU_MEDITATION.title": "潮民静修",
+  "BUHRU_MEDITATION.description": "获得{Block:diff()}点格挡。\n下回合获得{Energy:energyIcons()}。",
+
+  "CRUSHING_WAVE.title": "碎浪",
+  "CRUSHING_WAVE.description": "造成{Damage:diff()}点伤害并[gold]命令[/gold]。\n若目标拥有[gold]躯壳[/gold]，再次[gold]命令[/gold]。",
+
+  "TENTACLE_SLAM.title": "触手猛击",
+  "TENTACLE_SLAM.description": "对所有敌人造成{Damage:diff()}点伤害。",
+
+  "PRIESTESS_GUARD.title": "祭司护步",
+  "PRIESTESS_GUARD.description": "获得{TemporaryStrength:diff()}点临时力量。\n造成{Damage:diff()}点伤害并赋予目标{WeakPower:diff()}层虚弱。",
+
+  "IDOL_RECALL.title": "神像返响",
+  "IDOL_RECALL.description": "造成{Damage:diff()}点伤害。\n抽{Cards:diff()}张牌，弃{Discard:diff()}张牌。",
+
+  "TRIAL_DANCE.title": "试炼之舞",
+  "TRIAL_DANCE.description": "造成{Damage:diff()}点伤害{Times:diff()}次。\n若目标拥有[gold]躯壳[/gold]，抽{Cards:diff()}张牌。",
+
+  "GUARD_BREAKING_WAVE.title": "裂甲潮",
+  "GUARD_BREAKING_WAVE.description": "造成{Damage:diff()}点伤害{Times:diff()}次。\n每次命中后，给予目标{Husk:diff()}层[gold]躯壳[/gold]。",
+
+  "SURGING_SERMON.title": "涌潮布道",
+  "SURGING_SERMON.description": "获得{TemporaryStrength:diff()}点临时力量和{TemporaryDexterity:diff()}点临时敏捷。",
+
+  "LINE_BREAKER.title": "破阵",
+  "LINE_BREAKER.description": "造成{Damage:diff()}点伤害{Times:diff()}次。\n[gold]命令[/gold]{Commands:diff()}次。",
+
+  "DEEP_MEDITATION.title": "渊海入定",
+  "DEEP_MEDITATION.description": "获得{Block:diff()}点格挡{Times:diff()}次。\n下回合获得{Faith:diff()}点[gold]信仰[/gold]。",
+
+  "RHYTHM_OF_MOTION.title": "潮行节律",
+  "RHYTHM_OF_MOTION.description": "每回合第一次打出技能牌后，获得{TemporaryDexterity:diff()}点临时敏捷。",
+
+  "FERVOR_OF_MOTION.title": "狂潮热忱",
+  "FERVOR_OF_MOTION.description": "每回合第一次打出攻击牌后，获得{TemporaryStrength:diff()}点临时力量。",
+
+  "WOUNDED_VESSEL.title": "裂魂之器",
+  "WOUNDED_VESSEL.description": "扯出敌人的[gold]灵魂[/gold]，持续{Turns:diff()}回合。\n并给予本体{WeakPower:diff()}层虚弱。",
+
+  "IDOL_WARD.title": "神像庇护",
+  "IDOL_WARD.description": "获得{Block:diff()}点格挡。\n获得{Faith:diff()}点[gold]信仰[/gold]。",
+
+  "VESSEL_CRACK.title": "裂壳仪式",
+  "VESSEL_CRACK.description": "给予目标{VulnerablePower:diff()}层易伤。\n若目标是[gold]灵魂[/gold]，本体也获得{VulnerablePower:diff()}层易伤。",
+
+  "SPIRIT_LASH.title": "魂鞭",
+  "SPIRIT_LASH.description": "造成{Damage:diff()}点伤害。\n若目标拥有[gold]躯壳[/gold]，[gold]命令[/gold]。",
+
+  "MOTION_OF_NAGAKABOUROS.title": "娜伽卡波洛丝之潮",
+  "MOTION_OF_NAGAKABOUROS.description": "[gold]生长[/gold]{Tentacles:diff()}。\n抽{Cards:diff()}张牌。",
+
+  "OVERSTEPPING_FAITH.title": "过界信仰",
+  "OVERSTEPPING_FAITH.description": "对所有敌人造成{Damage:diff()}点伤害。\n每有一名敌人，[gold]生长[/gold]{Tentacles:diff()}。",
+
+  "SPIRITUAL_PREPARATION.title": "备魂仪式",
+  "SPIRITUAL_PREPARATION.description": "获得{Block:diff()}点格挡{Times:diff()}次。\n若场上有[gold]灵魂[/gold]，下回合获得{Energy:energyIcons()}并抽{Cards:diff()}张牌。",
+
+  "PROPHET_OF_NAGAKABOUROS.title": "深海神谕",
+  "PROPHET_OF_NAGAKABOUROS.description": "[gold]生长[/gold]{Tentacles:diff()}。\n获得{Faith:diff()}点[gold]信仰[/gold]。",
+
+  "LEAP_OF_FAITH.title": "信仰回击",
+  "LEAP_OF_FAITH.description": "造成{Damage:diff()}点伤害。\n若你拥有[gold]信仰[/gold]，[gold]命令[/gold]。",
+
+  "TIDECALLER.title": "潮声使者",
+  "TIDECALLER.description": "每回合第一次[gold]命令[/gold]时，抽{Cards:diff()}张牌。",
+
+  "DRAIN.title": "汲取",
+  "DRAIN.description": "每当[gold]触手[/gold]攻击拥有[gold]躯壳[/gold]的单位时，获得{Block:diff()}点格挡。",
+
+  "RELENTLESS_FAITH.title": "不灭信念",
+  "RELENTLESS_FAITH.description": "每回合第一次打出有目标的攻击牌后，[gold]命令[/gold]。",
+
+  "KRAKEN_PRIESTESS.title": "深海祭司",
+  "KRAKEN_PRIESTESS.description": "每当你[gold]生长[/gold]时，每生长[blue]1[/blue]，获得{Faith:diff()}点[gold]信仰[/gold]。",
+
+  "HARROWING_SERMON.title": "惊魂训诫",
+  "HARROWING_SERMON.description": "扯出敌人的[gold]灵魂[/gold]，持续{Turns:diff()}回合。\n给予[gold]灵魂[/gold]{VulnerablePower:diff()}层易伤。",
+
+  "NAGAKABOUROS_RISING.title": "真神升潮",
+  "NAGAKABOUROS_RISING.description": "对所有敌人造成{Damage:diff()}点伤害。\n对所有拥有[gold]躯壳[/gold]的敌人[gold]命令[/gold]。",
+
+  "ANCIENT_GOD_PROPHET.title": "古神先知",
+  "ANCIENT_GOD_PROPHET.description": "打出时，[gold]生长[/gold]{Tentacles:diff()}。\n之后每回合第一次[gold]命令[/gold]时，获得{Faith:diff()}点[gold]信仰[/gold]。",
+
+  "SOUL_IMPACT.title": "断魂震击",
+  "SOUL_IMPACT.description": "击碎怪物[gold]灵魂[/gold]时，击晕本体。\n若本体已经眩晕，则使其获得[blue]2[/blue]层虚弱和[blue]2[/blue]层易伤。",
+
+  "TRIAL_BY_MOTION.title": "逐潮试炼",
+  "TRIAL_BY_MOTION.description": "获得{StrengthPower:diff()}点力量和{DexterityPower:diff()}点敏捷。\n[gold]生长[/gold]{Tentacles:diff()}。",
+
+  "SERPENT_DANCE.title": "海蛇之舞",
+  "SERPENT_DANCE.description": "获得{Energy:energyIcons()}。\n抽{Cards:diff()}张牌，弃{Discard:diff()}张牌。",
+
+  "UNDERTOW.title": "回卷暗流",
+  "UNDERTOW.description": "对所有敌人造成{Damage:diff()}点伤害{Times:diff()}次。",
+
+  "VOICE_OF_THE_DEEP.title": "深海之声",
+  "VOICE_OF_THE_DEEP.description": "[gold]命令[/gold]{Commands:diff()}次。\n若目标拥有[gold]躯壳[/gold]，获得{Faith:diff()}点[gold]信仰[/gold]。",
+
+  "THE_SEA_ANSWERS.title": "海之回应",
+  "THE_SEA_ANSWERS.description": "获得{Faith:diff()}点[gold]信仰[/gold]。\n击碎怪物[gold]灵魂[/gold]时，获得{Energy:energyIcons()}。",
+
+  "DIVINE_FORM.title": "神意形态",
+  "DIVINE_FORM.description": "在你的回合开始时，获得{Faith:diff()}点[gold]信仰[/gold]并[gold]生长[/gold]{Tentacles:diff()}。",
+
+  "RAGING_TIDE.title": "狂澜",
+  "RAGING_TIDE.description": "[gold]命令[/gold][blue]X[/blue]+{Commands:diff()}次。",
+
+  "REND_SOUL.title": "撕裂灵魂",
+  "REND_SOUL.description": "扯出敌人的[blue]X[/blue]个[gold]灵魂[/gold]，持续{Turns:diff()}回合。",
+  "REND_SOUL.upgradedDescription": "扯出敌人的[blue]X[/blue]+{BonusSouls:diff()}个[gold]灵魂[/gold]，持续{Turns:diff()}回合。",
+
+  "TRIAL_OF_THE_ANCIENT_GOD.title": "怒斥",
+  "TRIAL_OF_THE_ANCIENT_GOD.description": "造成{Damage:diff()}点伤害。\n[gold]命令[/gold]。\n若目标是[gold]灵魂[/gold]，额外[gold]命令[/gold]其本体。",
+
+  "NAGAKABOUROS_DESCENDS.title": "娜伽卡波洛丝降临",
+  "NAGAKABOUROS_DESCENDS.description": "[gold]生长[/gold]{Tentacles:diff()}。\n每回合第一次扯出[gold]灵魂[/gold]时，[gold]命令[/gold]该灵魂。"
+}
