@@ -1,0 +1,47 @@
+{
+  "FAMILIAR_STATUE_RELIC.title": "眼熟的雕像",
+  "FAMILIAR_STATUE_RELIC.description": "战斗开始时，所有敌人失去[blue]1[/blue]点[gold]力量[/gold]。",
+  "FAMILIAR_STATUE_RELIC.flavor": "容貌相近，气质相异，你或许见过这个人？",
+
+  "SWORD_HAMMER_RELIC.title": "“剑锤”",
+  "SWORD_HAMMER_RELIC.description": "所有耗能为[blue]0[/blue]的卡牌耗能增加[blue]1[/blue]，且重放[blue]1[/blue]次。",
+  "SWORD_HAMMER_RELIC.flavor": "插在巨大石头上的剑，到底是谁这么无聊啊。",
+
+  "BROKEN_SWORD_RELIC.title": "“断剑”",
+  "BROKEN_SWORD_RELIC.description": "所有耗能大于等于[blue]2[/blue]的卡牌耗能减少[blue]1[/blue]，且打出后会[red]消耗[/red]。",
+  "BROKEN_SWORD_RELIC.flavor": "一把折断的剑，姑且能用……大概吧……",
+
+  "FLOWER_OF_CANDE_RELIC.title": "《坎德之花》",
+  "FLOWER_OF_CANDE_RELIC.description": "回合开始时，回复[blue]1[/blue]点生命。",
+  "FLOWER_OF_CANDE_RELIC.flavor": "雕刻在石板上的叙事诗，是八百年前高卢一位著名的诗人留下的巨作。",
+
+  "OLD_GAULISH_PLACE_NAMES_RELIC.title": "《旧高卢地名源流考》",
+  "OLD_GAULISH_PLACE_NAMES_RELIC.description": "战斗开始时，获得[blue]3[/blue]层[gold]再生[/gold]。",
+  "OLD_GAULISH_PLACE_NAMES_RELIC.flavor": "薄绿从博士办公室里翻出来的古地名历史书，里面记载有克莱布拉松。",
+
+  "RHODES_DOOR_RELIC.title": "罗德之门",
+  "RHODES_DOOR_RELIC.description": "获得时，向你的牌组内加入[blue]1[/blue]张[gold]打击[/gold]和[blue]1[/blue]张[gold]防御[/gold]。战斗结束时，升级你在本场战斗中最后打出的牌。",
+  "RHODES_DOOR_RELIC.flavor": "这扇经过改造的“门”将两段故事紧紧连接到了一起，“门”的另一头是罗德戴尔——萨卡兹与感染者们的避风港。",
+
+  "NUMBNESS_AND_VULGARITY_RELIC.title": "《麻木与庸俗》",
+  "NUMBNESS_AND_VULGARITY_RELIC.description": "战斗开始时，获得[blue]1[/blue]层[gold]人工制品[/gold]。",
+  "NUMBNESS_AND_VULGARITY_RELIC.flavor": "一件著名的艺术品，两百年前莱塔尼亚疯狂雕塑家的遗作。",
+
+  "PROPHECY_PROJECTION_RELIC.title": "预言显像",
+  "PROPHECY_PROJECTION_RELIC.description": "[gold]终曲合声[/gold]会在作战中出现。",
+  "PROPHECY_PROJECTION_RELIC.flavor": "你一定听说过这样一段文字：“我见你，头顶黑冠，将千万生灵，熬成回忆......”",
+  "PROPHECY_PROJECTION_RELIC.final_chorale.title": "终曲合声",
+  "PROPHECY_PROJECTION_RELIC.final_chorale.description": "每场战斗都会出现的额外爪牙敌人，出现时继承上次战斗结束时的生命值。被击败后掉落[blue]2[/blue]件随机遗物和[gold]无终之钥[/gold]。",
+
+  "ENDLESS_KEY_RELIC.title": "无终之钥",
+  "ENDLESS_KEY_RELIC.description": "[red]让探索开启不同的方向。[/red]",
+  "ENDLESS_KEY_RELIC.flavor": "经由你的泉涌灵思，故事从虚无中诞生；经由你的枯竭想象，阿米娅将要终止万物。你的思想能够成为反抗她的武器吗？",
+
+  "DIMENSIONAL_FLUID_RELIC.title": "维度流质",
+  "DIMENSIONAL_FLUID_RELIC.description": "[red]让探索开启不同的方向。[/red]",
+  "DIMENSIONAL_FLUID_RELIC.flavor": "融合各国技术，对坍缩体和冰原巨构进行深入研究后研制的核心原料。在通过考验后，那位罗德岛干员把它正式交付给了你，还给你留了一句叮嘱：“把它安全送去冰原尽头，凯尔希在那里等你。”",
+
+  "TIME_AND_LIGHT_RELIC.title": "时与光",
+  "TIME_AND_LIGHT_RELIC.description": "战斗开始时，获得[blue]1[/blue]点[gold]力量[/gold]。[red]让探索开启不同的方向。[/red]",
+  "TIME_AND_LIGHT_RELIC.flavor": "唤醒律法的第一声狂嚎。"
+}

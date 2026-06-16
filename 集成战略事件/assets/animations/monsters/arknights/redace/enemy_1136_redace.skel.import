@@ -1,0 +1,12 @@
+[remap]
+
+importer="spine.skel"
+type="SpineSkeletonFileResource"
+path="res://IntegratedStrategyEvents/_imported/enemy_1136_redace.skel.spskel"
+
+[deps]
+
+source_file="res://IntegratedStrategyEvents/animations/monsters/arknights/redace/enemy_1136_redace.skel"
+dest_files=["res://IntegratedStrategyEvents/_imported/enemy_1136_redace.skel.spskel"]
+
+[params]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+path="res://IntegratedStrategyEvents/_imported/enemy_1136_redace.atlas.spatlas"
+
+[deps]
+
+source_file="res://IntegratedStrategyEvents/animations/monsters/arknights/redace/enemy_1136_redace.atlas"
+dest_files=["res://IntegratedStrategyEvents/_imported/enemy_1136_redace.atlas.spatlas"]
+
+[params]
+
+normal_map_prefix="n"
+specular_map_prefix="s"

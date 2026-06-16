@@ -1,0 +1,15 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+path="res://IntegratedStrategyEvents/_imported/enemy_2057_smkght.atlas.spatlas"
+
+[deps]
+
+source_file="res://IntegratedStrategyEvents/animations/monsters/arknights/smkght/enemy_2057_smkght.atlas"
+dest_files=["res://IntegratedStrategyEvents/_imported/enemy_2057_smkght.atlas.spatlas"]
+
+[params]
+
+normal_map_prefix="n"
+specular_map_prefix="s"

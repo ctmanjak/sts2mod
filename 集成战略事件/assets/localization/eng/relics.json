@@ -1,0 +1,47 @@
+{
+  "FAMILIAR_STATUE_RELIC.title": "Familiar Statue",
+  "FAMILIAR_STATUE_RELIC.description": "At the start of combat, all enemies lose [blue]1[/blue] [gold]Strength[/gold].",
+  "FAMILIAR_STATUE_RELIC.flavor": "A familiar face, a different air. Perhaps you have seen this person before?",
+
+  "SWORD_HAMMER_RELIC.title": "\"Sword Hammer\"",
+  "SWORD_HAMMER_RELIC.description": "All cards that cost [blue]0[/blue] cost [blue]1[/blue] more and replay [blue]1[/blue] time.",
+  "SWORD_HAMMER_RELIC.flavor": "A sword stuck in a huge stone. Who had the time for this?",
+
+  "BROKEN_SWORD_RELIC.title": "\"Broken Sword\"",
+  "BROKEN_SWORD_RELIC.description": "All cards that cost [blue]2[/blue] or more cost [blue]1[/blue] less and [red]Exhaust[/red] after being played.",
+  "BROKEN_SWORD_RELIC.flavor": "A broken sword. Usable enough... probably...",
+
+  "FLOWER_OF_CANDE_RELIC.title": "The Flower of Cande",
+  "FLOWER_OF_CANDE_RELIC.description": "At the start of your turn, heal [blue]1[/blue] HP.",
+  "FLOWER_OF_CANDE_RELIC.flavor": "An epic carved into stone, left by a famous Gaulish poet eight hundred years ago.",
+
+  "OLD_GAULISH_PLACE_NAMES_RELIC.title": "On Old Gaulish Place Names",
+  "OLD_GAULISH_PLACE_NAMES_RELIC.description": "At the start of combat, gain [blue]3[/blue] [gold]Regen[/gold].",
+  "OLD_GAULISH_PLACE_NAMES_RELIC.flavor": "An old book on place-name history Popukar found in the Doctor's office. It records Clebrasson.",
+
+  "RHODES_DOOR_RELIC.title": "Rhodes Door",
+  "RHODES_DOOR_RELIC.description": "Upon pickup, add [blue]1[/blue] [gold]Strike[/gold] and [blue]1[/blue] [gold]Defend[/gold] to your deck. At the end of combat, upgrade the last card you played this combat.",
+  "RHODES_DOOR_RELIC.flavor": "This modified \"door\" binds two stories tightly together. Beyond it lies Rhodesdale, a haven for Sarkaz and the Infected.",
+
+  "NUMBNESS_AND_VULGARITY_RELIC.title": "Numbness and Vulgarity",
+  "NUMBNESS_AND_VULGARITY_RELIC.description": "At the start of combat, gain [blue]1[/blue] [gold]Artifact[/gold].",
+  "NUMBNESS_AND_VULGARITY_RELIC.flavor": "A famous artwork, the final piece of a mad Leithanian sculptor from two hundred years ago.",
+
+  "PROPHECY_PROJECTION_RELIC.title": "Prophecy Projection",
+  "PROPHECY_PROJECTION_RELIC.description": "[gold]Final Chorale[/gold] appears in combat.",
+  "PROPHECY_PROJECTION_RELIC.flavor": "You must have heard these words: \"I see you, black crown upon your head, boiling countless lives into memories...\"",
+  "PROPHECY_PROJECTION_RELIC.final_chorale.title": "Final Chorale",
+  "PROPHECY_PROJECTION_RELIC.final_chorale.description": "An additional minion enemy that appears in every combat. It inherits the HP it had at the end of the previous combat. When defeated, it drops [blue]2[/blue] random relics and the [gold]Endless Key[/gold].",
+
+  "ENDLESS_KEY_RELIC.title": "Endless Key",
+  "ENDLESS_KEY_RELIC.description": "[red]Let exploration open onto another direction.[/red]",
+  "ENDLESS_KEY_RELIC.flavor": "Through your wellspring inspiration, a story is born from nothingness; through your exhausted imagination, Amiya will bring all things to an end. Can your thoughts become a weapon against her?",
+
+  "DIMENSIONAL_FLUID_RELIC.title": "Dimensional Fluid",
+  "DIMENSIONAL_FLUID_RELIC.description": "[red]Let exploration open onto another direction.[/red]",
+  "DIMENSIONAL_FLUID_RELIC.flavor": "A core material produced by combining technologies from many nations and deeply researching collapsed entities and the icefield megastructure. After you passed the trial, that Rhodes Island operator formally entrusted it to you and left a warning: \"Take it safely to the end of the icefield. Kal'tsit is waiting there.\"",
+
+  "TIME_AND_LIGHT_RELIC.title": "Time and Light",
+  "TIME_AND_LIGHT_RELIC.description": "At the start of combat, gain [blue]1[/blue] [gold]Strength[/gold]. [red]Let exploration open onto another direction.[/red]",
+  "TIME_AND_LIGHT_RELIC.flavor": "The first mad howl that awakened the Law."
+}

@@ -1,0 +1,15 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+path="res://IntegratedStrategyEvents/_imported/enemy_2094_skzamb.atlas.spatlas"
+
+[deps]
+
+source_file="res://IntegratedStrategyEvents/animations/monsters/arknights/skzamb/enemy_2094_skzamb.atlas"
+dest_files=["res://IntegratedStrategyEvents/_imported/enemy_2094_skzamb.atlas.spatlas"]
+
+[params]
+
+normal_map_prefix="n"
+specular_map_prefix="s"

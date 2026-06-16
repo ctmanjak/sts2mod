@@ -1,0 +1,5 @@
+namespace IntegratedStrategyEvents.Encounters;
+
+public sealed class SarkazDescendantHatredCollectorsTestEncounter : FutureHunterSarkazDescendantHatredCollectorsEncounter
+{
+}

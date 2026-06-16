@@ -1,0 +1,19 @@
+[gd_scene format=3]
+
+[node name="PopularAttractionGremlins" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="starter_sneaky" type="Marker2D" parent="."]
+position = Vector2(1180, 735)
+
+[node name="merc" type="Marker2D" parent="."]
+position = Vector2(1480, 735)
+
+[node name="sneaky" type="Marker2D" parent="."]
+position = Vector2(1080, 735)
+
+[node name="fat" type="Marker2D" parent="."]
+position = Vector2(1680, 735)

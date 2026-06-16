@@ -1,0 +1,15 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+path="res://IntegratedStrategyEvents/_imported/enemy_1135_redman.atlas.spatlas"
+
+[deps]
+
+source_file="res://IntegratedStrategyEvents/animations/monsters/arknights/redman/enemy_1135_redman.atlas"
+dest_files=["res://IntegratedStrategyEvents/_imported/enemy_1135_redman.atlas.spatlas"]
+
+[params]
+
+normal_map_prefix="n"
+specular_map_prefix="s"

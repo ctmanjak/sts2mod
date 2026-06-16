@@ -1,0 +1,7 @@
+src/bin/
+src/obj/
+.build/
+_backup/
+*.DS_Store
+._*
+__MACOSX/

@@ -1,0 +1,62 @@
+using IntegratedStrategyEvents.Events;
+
+namespace IntegratedStrategyEvents;
+
+internal static partial class IntegratedStrategyContentCatalog
+{
+	public static Type[] EventTypes =>
+	[
+		typeof(BoundBloodEvent),
+		typeof(EntrustAdventurerEvent),
+		typeof(WastefulRevelryEvent),
+		typeof(FatefulMeetingEvent),
+		typeof(PathOfSufferingEvent),
+		typeof(TreasureChestDanceEvent),
+		typeof(NorthWindWitchEvent),
+		typeof(ResolvingDoubtsEvent),
+		typeof(TurningPointEvent),
+		typeof(PopularAttractionEvent),
+		typeof(AllComersWelcomeEvent),
+		typeof(TransmissionEvent),
+		typeof(DepartedGardenEvent),
+		typeof(LiuerEvent),
+		typeof(DevoutPersonEvent),
+		typeof(ForesightEvent),
+		typeof(TrappedPersonEvent),
+		typeof(SleepingStatueEvent),
+		typeof(TimidThievesEvent),
+		typeof(SeabornScholarEvent),
+		typeof(KindlingSparkEvent),
+		typeof(SecretDoorEvent),
+		typeof(ForSurvivalEvent),
+		typeof(UrsusEvent),
+		typeof(SuspicionChainEvent),
+		typeof(HundredMileEncampmentEvent),
+		typeof(InviteToPlayEvent),
+		typeof(FortuneFlowsEvent),
+		typeof(CompletionCeremonyEvent),
+		typeof(LostMountainsEvent),
+		typeof(BlackFootprintsEvent),
+		typeof(RoyalDisputeEvent),
+		typeof(FutureHunterEvent),
+		typeof(DesperateChoiceEvent),
+		typeof(BusinessEmpireEvent),
+		typeof(SpeciousEvent),
+		typeof(SwordInStoneEvent),
+		typeof(SecretRoomEvent),
+		typeof(DustDevouringSpreadEvent),
+		typeof(AfterStoryEndsEvent),
+		typeof(SamiLanguageEvent),
+		typeof(UnfreezingRiverEvent),
+		typeof(NorthernWizardArenaEvent),
+		typeof(ForwardForestEvent),
+		typeof(GlimpseEvent),
+		typeof(ShiftingCityEvent),
+		typeof(StoryToBeToldEvent),
+		typeof(VoidPortentEvent),
+		typeof(AnomalousReportEvent),
+		typeof(ChangeEvent),
+		typeof(ReconstructionEvent),
+		typeof(ExplorerSmallStepEvent)
+	];
+}

@@ -1,0 +1,16 @@
+[gd_scene format=3]
+
+[node name="BozhokastiSaintguardGunnerEncounter" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="bozhokasti_summon_left" type="Marker2D" parent="."]
+position = Vector2(1025, 735)
+
+[node name="bozhokasti_summon_right" type="Marker2D" parent="."]
+position = Vector2(1285, 735)
+
+[node name="bozhokasti" type="Marker2D" parent="."]
+position = Vector2(1625, 735)
