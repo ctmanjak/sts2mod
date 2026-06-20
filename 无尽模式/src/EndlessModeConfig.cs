@@ -15,6 +15,12 @@ internal enum EndlessOptionalReward
 
 internal sealed class EndlessModeConfig
 {
+	public const int DefaultPlagueSpearPercent = 50;
+	public const int DefaultPlagueShieldPercent = 75;
+	public const int MinPlagueScalingPercent = 0;
+	public const int MaxPlagueScalingPercent = 300;
+	public const int PlagueScalingPercentStep = 5;
+
 	private const string ConfigFileName = "config.json";
 	private static readonly JsonSerializerOptions JsonOptions = new(JsonSerializerDefaults.Web)
 	{
@@ -35,7 +41,17 @@ internal sealed class EndlessModeConfig
 	[JsonPropertyName("grant_horrible_trophy")]
 	public bool GrantHorribleTrophy { get; set; } = true;
 
+	[JsonPropertyName("plague_spear_percent")]
+	public int PlagueSpearPercent { get; set; } = DefaultPlagueSpearPercent;
+
+	[JsonPropertyName("plague_shield_percent")]
+	public int PlagueShieldPercent { get; set; } = DefaultPlagueShieldPercent;
+
 	internal static EndlessModeConfig Current => _current;
+
+	internal static int CurrentPlagueSpearPercent => ClampPlagueScalingPercent(Current.PlagueSpearPercent);
+
+	internal static int CurrentPlagueShieldPercent => ClampPlagueScalingPercent(Current.PlagueShieldPercent);
 
 	internal static EndlessOptionalReward GetOptionalRewardForTier(int rewardTier)
 	{
@@ -100,6 +116,35 @@ internal sealed class EndlessModeConfig
 		SaveCurrent();
 	}
 
+	internal static void SetPlagueSpearPercent(int percent)
+	{
+		int clamped = ClampPlagueScalingPercent(percent);
+		if (Current.PlagueSpearPercent == clamped)
+		{
+			return;
+		}
+
+		Current.PlagueSpearPercent = clamped;
+		SaveCurrent();
+	}
+
+	internal static void SetPlagueShieldPercent(int percent)
+	{
+		int clamped = ClampPlagueScalingPercent(percent);
+		if (Current.PlagueShieldPercent == clamped)
+		{
+			return;
+		}
+
+		Current.PlagueShieldPercent = clamped;
+		SaveCurrent();
+	}
+
+	internal static int ClampPlagueScalingPercent(int percent)
+	{
+		return Math.Clamp(percent, MinPlagueScalingPercent, MaxPlagueScalingPercent);
+	}
+
 	private static int GetRewardFlag(EndlessOptionalReward reward)
 	{
 		return 1 << (int)reward;
@@ -125,6 +170,7 @@ internal sealed class EndlessModeConfig
 			EndlessModeConfig? config = JsonSerializer.Deserialize<EndlessModeConfig>(File.ReadAllText(configPath), JsonOptions);
 			if (config != null)
 			{
+				Normalize(config);
 				WriteConfig(configPath, config);
 				return config;
 			}
@@ -141,7 +187,14 @@ internal sealed class EndlessModeConfig
 
 	private static void SaveCurrent()
 	{
+		Normalize(Current);
 		WriteConfig(GetConfigPath(), Current);
+	}
+
+	private static void Normalize(EndlessModeConfig config)
+	{
+		config.PlagueSpearPercent = ClampPlagueScalingPercent(config.PlagueSpearPercent);
+		config.PlagueShieldPercent = ClampPlagueScalingPercent(config.PlagueShieldPercent);
 	}
 
 	private static void WriteConfig(string configPath, EndlessModeConfig config)

@@ -1,6 +1,7 @@
 using Godot;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Logging;
+using MegaCrit.Sts2.Core.Multiplayer.Game;
 using MegaCrit.Sts2.Core.Nodes.Screens.CharacterSelect;
 
 namespace EndlessMode;
@@ -26,6 +27,7 @@ internal static class EndlessModeConfigUi
 	private static void InstallPanel(NCharacterSelectScreen characterSelect)
 	{
 		RemoveExistingPanel(characterSelect);
+		bool canEdit = CanEdit(characterSelect);
 
 		PanelContainer panel = new()
 		{
@@ -36,8 +38,8 @@ internal static class EndlessModeConfigUi
 			AnchorTop = 0f,
 			AnchorRight = 0f,
 			AnchorBottom = 0f,
-			CustomMinimumSize = new Vector2(432f, 228f),
-			Size = new Vector2(432f, 228f)
+			CustomMinimumSize = new Vector2(500f, 328f),
+			Size = new Vector2(500f, 328f)
 		};
 		ApplyPanelStyle(panel);
 		ConnectDragHandle(panel, panel);
@@ -69,22 +71,39 @@ internal static class EndlessModeConfigUi
 			13,
 			new Color(0.92f, 0.88f, 0.76f, 0.9f)));
 
+		stack.AddChild(CreatePlagueSliderRow(
+			"ENDLESS_MODE.config.plague_spear",
+			"荒疫之矛强化",
+			EndlessModeConfig.CurrentPlagueSpearPercent,
+			EndlessModeConfig.SetPlagueSpearPercent,
+			canEdit));
+		stack.AddChild(CreatePlagueSliderRow(
+			"ENDLESS_MODE.config.plague_shield",
+			"荒疫之盾强化",
+			EndlessModeConfig.CurrentPlagueShieldPercent,
+			EndlessModeConfig.SetPlagueShieldPercent,
+			canEdit));
+
 		stack.AddChild(CreateRewardCheckBox(
 			EndlessOptionalReward.MimicInfestation,
 			"ENDLESS_MODE.config.mimic",
-			"获得遍地宝箱怪"));
+			"获得遍地宝箱怪",
+			canEdit));
 		stack.AddChild(CreateRewardCheckBox(
 			EndlessOptionalReward.TimeMaze,
 			"ENDLESS_MODE.config.time_maze",
-			"获得时间迷宫"));
+			"获得时间迷宫",
+			canEdit));
 		stack.AddChild(CreateRewardCheckBox(
 			EndlessOptionalReward.Muzzle,
 			"ENDLESS_MODE.config.muzzle",
-			"获得嘴套"));
+			"获得嘴套",
+			canEdit));
 		stack.AddChild(CreateRewardCheckBox(
 			EndlessOptionalReward.HorribleTrophy,
 			"ENDLESS_MODE.config.horrible_trophy",
-			"获得可怖奖杯"));
+			"获得可怖奖杯",
+			canEdit));
 
 		characterSelect.AddChild(panel);
 		characterSelect.MoveChild(panel, characterSelect.GetChildCount() - 1);
@@ -139,28 +158,95 @@ internal static class EndlessModeConfigUi
 			Math.Clamp(globalPosition.Y, 0f, maxY));
 	}
 
-	private static CheckBox CreateRewardCheckBox(EndlessOptionalReward reward, string labelKey, string fallback)
+	private static HBoxContainer CreatePlagueSliderRow(string labelKey, string fallback, int percent, Action<int> setPercent, bool canEdit)
+	{
+		HBoxContainer row = new()
+		{
+			MouseFilter = Control.MouseFilterEnum.Pass
+		};
+		row.AddThemeConstantOverride("separation", 10);
+
+		Label label = CreateLabel(labelKey, fallback, 15, new Color(0.95f, 0.93f, 0.84f));
+		label.CustomMinimumSize = new Vector2(118f, 28f);
+		row.AddChild(label);
+
+		HSlider slider = new()
+		{
+			MinValue = EndlessModeConfig.MinPlagueScalingPercent,
+			MaxValue = EndlessModeConfig.MaxPlagueScalingPercent,
+			Step = EndlessModeConfig.PlagueScalingPercentStep,
+			Value = percent,
+			Editable = canEdit,
+			CustomMinimumSize = new Vector2(260f, 28f),
+			SizeFlagsHorizontal = Control.SizeFlags.ExpandFill,
+			MouseFilter = canEdit ? Control.MouseFilterEnum.Stop : Control.MouseFilterEnum.Ignore,
+			FocusMode = canEdit ? Control.FocusModeEnum.All : Control.FocusModeEnum.None,
+			TooltipText = Text("ENDLESS_MODE.config.plague_tooltip", "进入下一轮无尽时写入荒疫遗物。0% 表示只叠层不强化。")
+		};
+		slider.Modulate = canEdit ? Colors.White : new Color(0.68f, 0.68f, 0.68f, 0.8f);
+		row.AddChild(slider);
+
+		Label valueLabel = CreateLiteralLabel(FormatPercent(percent), 15, new Color(0.95f, 0.78f, 0.22f));
+		valueLabel.HorizontalAlignment = HorizontalAlignment.Right;
+		valueLabel.CustomMinimumSize = new Vector2(50f, 28f);
+		row.AddChild(valueLabel);
+
+		slider.Connect(Godot.Range.SignalName.ValueChanged, Callable.From<double>(value =>
+		{
+			int nextPercent = SliderValueToPercent(value);
+			valueLabel.Text = FormatPercent(nextPercent);
+			if (canEdit)
+			{
+				setPercent(nextPercent);
+			}
+		}));
+		return row;
+	}
+
+	private static CheckBox CreateRewardCheckBox(EndlessOptionalReward reward, string labelKey, string fallback, bool canEdit)
 	{
 		CheckBox checkBox = new()
 		{
 			Text = Text(labelKey, fallback),
 			ButtonPressed = EndlessModeConfig.IsRewardEnabled(reward),
+			Disabled = !canEdit,
 			MouseFilter = Control.MouseFilterEnum.Stop,
-			FocusMode = Control.FocusModeEnum.All,
+			FocusMode = canEdit ? Control.FocusModeEnum.All : Control.FocusModeEnum.None,
 			CustomMinimumSize = new Vector2(360f, 28f),
 			TooltipText = Text("ENDLESS_MODE.config.tooltip", "关闭后，之后进入对应轮次的无尽模式时不会获得该遗物。")
 		};
 		checkBox.AddThemeFontSizeOverride("font_size", 15);
 		checkBox.AddThemeColorOverride("font_color", new Color(0.95f, 0.93f, 0.84f));
-		checkBox.Connect(BaseButton.SignalName.Toggled, Callable.From<bool>(enabled => EndlessModeConfig.SetRewardEnabled(reward, enabled)));
+		checkBox.Connect(BaseButton.SignalName.Toggled, Callable.From<bool>(enabled =>
+		{
+			if (canEdit)
+			{
+				EndlessModeConfig.SetRewardEnabled(reward, enabled);
+			}
+		}));
 		return checkBox;
+	}
+
+	private static int SliderValueToPercent(double value)
+	{
+		return EndlessModeConfig.ClampPlagueScalingPercent((int)Math.Round(value, MidpointRounding.AwayFromZero));
+	}
+
+	private static string FormatPercent(int percent)
+	{
+		return EndlessModeConfig.ClampPlagueScalingPercent(percent).ToString("0") + "%";
 	}
 
 	private static Label CreateLabel(string key, string fallback, int fontSize, Color color)
 	{
+		return CreateLiteralLabel(Text(key, fallback), fontSize, color);
+	}
+
+	private static Label CreateLiteralLabel(string text, int fontSize, Color color)
+	{
 		Label label = new()
 		{
-			Text = Text(key, fallback),
+			Text = text,
 			MouseFilter = Control.MouseFilterEnum.Ignore
 		};
 		label.AddThemeFontSizeOverride("font_size", fontSize);
@@ -193,6 +279,18 @@ internal static class EndlessModeConfigUi
 		catch
 		{
 			return fallback;
+		}
+	}
+
+	private static bool CanEdit(NCharacterSelectScreen characterSelect)
+	{
+		try
+		{
+			return characterSelect.Lobby?.NetService?.Type != NetGameType.Client;
+		}
+		catch
+		{
+			return true;
 		}
 	}
 

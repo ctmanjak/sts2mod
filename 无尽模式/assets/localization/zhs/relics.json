@@ -1,9 +1,9 @@
 {
   "PLAGUE_SPEAR.title": "荒疫之矛",
-  "PLAGUE_SPEAR.description": "怪物造成的攻击伤害提高[blue]50%[/blue]。每多[blue]1[/blue]层，再额外提高[blue]50%[/blue]。",
+  "PLAGUE_SPEAR.description": "怪物造成的攻击伤害提高[blue]{Percent}%[/blue]。每多[blue]1[/blue]层，再额外提高[blue]{Percent}%[/blue]。",
   "PLAGUE_SPEAR.flavor": "尖端会记住每一次轮回。",
   "PLAGUE_SHIELD.title": "荒疫之盾",
-  "PLAGUE_SHIELD.description": "怪物的最大生命、格挡获取量与回复量提高[blue]75%[/blue]。每多[blue]1[/blue]层，再额外提高[blue]75%[/blue]。",
+  "PLAGUE_SHIELD.description": "怪物的最大生命、格挡获取量与回复量提高[blue]{Percent}%[/blue]。每多[blue]1[/blue]层，再额外提高[blue]{Percent}%[/blue]。",
   "PLAGUE_SHIELD.flavor": "厚重得足以挡下时间。",
   "MIMIC_INFESTATION.title": "遍地宝箱怪",
   "MIMIC_INFESTATION.description": "之后阶段中的宝箱房将被替换为精英敌人。精英敌人不再掉落遗物。",

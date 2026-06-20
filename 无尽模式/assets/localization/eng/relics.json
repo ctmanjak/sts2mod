@@ -1,9 +1,9 @@
 {
   "PLAGUE_SPEAR.title": "Plague Spear",
-  "PLAGUE_SPEAR.description": "Monsters deal [blue]50%[/blue] more attack damage. Each additional [blue]1[/blue] stack adds another [blue]50%[/blue].",
+  "PLAGUE_SPEAR.description": "Monsters deal [blue]{Percent}%[/blue] more attack damage. Each additional [blue]1[/blue] stack adds another [blue]{Percent}%[/blue].",
   "PLAGUE_SPEAR.flavor": "Its tip remembers every loop.",
   "PLAGUE_SHIELD.title": "Plague Shield",
-  "PLAGUE_SHIELD.description": "Monsters gain [blue]75%[/blue] more max HP, block gain, and healing. Each additional [blue]1[/blue] stack adds another [blue]75%[/blue].",
+  "PLAGUE_SHIELD.description": "Monsters gain [blue]{Percent}%[/blue] more max HP, block gain, and healing. Each additional [blue]1[/blue] stack adds another [blue]{Percent}%[/blue].",
   "PLAGUE_SHIELD.flavor": "Heavy enough to block time itself.",
   "MIMIC_INFESTATION.title": "Mimic Infestation",
   "MIMIC_INFESTATION.description": "Treasure rooms in later acts become elite fights. Elite fights no longer drop relics.",
