@@ -5,6 +5,9 @@
     <RootNamespace>Illaoi</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <BaseLibHintPath>/Users/iniad/Library/Application Support/Steam/steamapps/common/Slay the Spire 2/SlayTheSpire2.app/Contents/MacOS/mods/BaseLib/BaseLib.dll</BaseLibHintPath>
+    <BaseLibHintPath Condition="!Exists('$(BaseLibHintPath)')">/Users/iniad/Library/Application Support/Steam/steamapps/common/Slay the Spire 2/SlayTheSpire2.app/Contents/MacOS/BaseLib/BaseLib.dll</BaseLibHintPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,6 +25,10 @@
     </Reference>
     <Reference Include="SmartFormat">
       <HintPath>/Users/iniad/Library/Application Support/Steam/steamapps/common/Slay the Spire 2/SlayTheSpire2.app/Contents/Resources/data_sts2_macos_arm64/SmartFormat.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BaseLib">
+      <HintPath>$(BaseLibHintPath)</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>

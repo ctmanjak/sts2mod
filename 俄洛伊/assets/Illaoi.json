@@ -3,8 +3,15 @@
   "name": "俄洛伊",
   "author": "Natsuki",
   "description": "新增围绕触手、生长、命令、灵魂、躯壳、临时力量和临时敏捷展开的俄洛伊角色，包含触手、灵魂和运动过牌三条主要流派。",
-  "version": "0.1.2",
+  "version": "0.2.0",
+  "min_game_version": "0.107.1",
   "has_pck": true,
   "has_dll": true,
+  "dependencies": [
+    {
+      "id": "BaseLib",
+      "min_version": "v3.3.0"
+    }
+  ],
   "affects_gameplay": true
 }

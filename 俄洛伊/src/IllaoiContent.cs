@@ -681,7 +681,7 @@ public sealed class SpiritMark : CardModel
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{
-		CombatState combatState = Owner.Creature.CombatState
+		ICombatState combatState = Owner.Creature.CombatState
 			?? throw new InvalidOperationException("Spirit Mark played outside combat.");
 		foreach (Creature enemy in combatState.Enemies.Where(static creature => creature.IsAlive).ToList())
 		{
@@ -894,7 +894,7 @@ public sealed class TentacleSlam : CardModel
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{
-		CombatState combatState = Owner.Creature.CombatState
+		ICombatState combatState = Owner.Creature.CombatState
 			?? throw new InvalidOperationException("Tentacle Slam played outside combat.");
 		await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).TargetingAllOpponents(combatState)
 			.WithHitFx("vfx/vfx_heavy_blunt")
@@ -1394,7 +1394,7 @@ public sealed class OversteppingFaith : CardModel
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{
-		CombatState combatState = Owner.Creature.CombatState
+		ICombatState combatState = Owner.Creature.CombatState
 			?? throw new InvalidOperationException("Overstepping Faith played outside combat.");
 		int enemyCount = combatState.Enemies.Count(static creature => creature.IsAlive);
 		await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).TargetingAllOpponents(combatState)
@@ -1685,7 +1685,7 @@ public sealed class NagakabourosRising : CardModel
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{
-		CombatState combatState = Owner.Creature.CombatState
+		ICombatState combatState = Owner.Creature.CombatState
 			?? throw new InvalidOperationException("Nagakabouros Rising played outside combat.");
 		await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).TargetingAllOpponents(combatState)
 			.WithHitFx("vfx/vfx_heavy_blunt")
@@ -1848,7 +1848,7 @@ public sealed class Undertow : CardModel
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{
-		CombatState combatState = Owner.Creature.CombatState
+		ICombatState combatState = Owner.Creature.CombatState
 			?? throw new InvalidOperationException("Undertow played outside combat.");
 		for (int i = 0; i < DynamicVars["Times"].IntValue; i++)
 		{
@@ -2111,7 +2111,7 @@ public sealed class NagakabourosDescends : CardModel
 	}
 }
 
-public class NagakabourosIdol : RelicModel
+public class NagakabourosIdol : IllaoiRelicBase
 {
 	private int _tentacles;
 
@@ -2164,7 +2164,7 @@ public class NagakabourosIdol : RelicModel
 		await IllaoiMechanics.Grow(Owner, 1);
 	}
 
-	public override Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+	public override Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
 	{
 		if (side == CombatSide.Player)
 		{

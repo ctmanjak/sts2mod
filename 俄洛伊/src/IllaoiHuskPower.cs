@@ -6,7 +6,7 @@ using MegaCrit.Sts2.Core.Models;
 
 namespace Illaoi;
 
-public sealed class IllaoiHuskPower : PowerModel
+public sealed class IllaoiHuskPower : IllaoiPowerBase
 {
 	public bool SkipNextPlayerTurnEndTick { get; set; }
 

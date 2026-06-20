@@ -8,7 +8,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Illaoi;
 
-public sealed class IllaoiSoulLinkPower : PowerModel
+public sealed class IllaoiSoulLinkPower : IllaoiPowerBase
 {
 	private bool _suppressShatterReward;
 	[NonSerialized]

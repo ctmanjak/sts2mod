@@ -4,7 +4,7 @@ internal static class ModInfo
 {
 	public const string Id = "Illaoi";
 	public const string LogPrefix = "[Illaoi]";
-	public const string TargetGameVersion = "0.103.2";
+	public const string TargetGameVersion = "0.107.1";
 
 	public const int TentacleDamage = 3;
 	public const decimal SoulHealthRatio = 0.5m;

@@ -1,52 +1,53 @@
+using BaseLib.Abstracts;
 using Godot;
 using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.Models;
 
 namespace Illaoi;
 
-public abstract class IllaoiCustomCharacterModel : CharacterModel
+public abstract class IllaoiCustomCharacterModel : CustomCharacterModel
 {
-	public virtual string? CustomVisualPath => null;
+	public override string? CustomVisualPath => null;
 
-	public virtual string? CustomTrailPath => null;
+	public override string? CustomTrailPath => null;
 
-	public virtual string? CustomIconTexturePath => null;
+	public override string? CustomIconTexturePath => null;
 
-	public virtual string? CustomIconOutlineTexturePath => null;
+	public override string? CustomIconOutlineTexturePath => null;
 
-	public virtual string? CustomIconPath => null;
+	public override string? CustomIconPath => null;
 
-	public virtual string? CustomEnergyCounterPath => null;
+	public override string? CustomEnergyCounterPath => null;
 
 	public virtual string? CustomEnergyCounterIconPath => null;
 
-	public virtual string? CustomRestSiteAnimPath => null;
+	public override string? CustomRestSiteAnimPath => null;
 
-	public virtual string? CustomMerchantAnimPath => null;
+	public override string? CustomMerchantAnimPath => null;
 
-	public virtual string? CustomArmPointingTexturePath => null;
+	public override string? CustomArmPointingTexturePath => null;
 
-	public virtual string? CustomArmRockTexturePath => null;
+	public override string? CustomArmRockTexturePath => null;
 
-	public virtual string? CustomArmPaperTexturePath => null;
+	public override string? CustomArmPaperTexturePath => null;
 
-	public virtual string? CustomArmScissorsTexturePath => null;
+	public override string? CustomArmScissorsTexturePath => null;
 
-	public virtual string? CustomCharacterSelectBg => null;
+	public override string? CustomCharacterSelectBg => null;
 
-	public virtual string? CustomCharacterSelectIconPath => null;
+	public override string? CustomCharacterSelectIconPath => null;
 
-	public virtual string? CustomCharacterSelectLockedIconPath => null;
+	public override string? CustomCharacterSelectLockedIconPath => null;
 
-	public virtual string? CustomCharacterSelectTransitionPath => null;
+	public override string? CustomCharacterSelectTransitionPath => null;
 
-	public virtual string? CustomMapMarkerPath => null;
+	public override string? CustomMapMarkerPath => null;
 
-	public virtual string? CustomAttackSfx => null;
+	public override string? CustomAttackSfx => null;
 
-	public virtual string? CustomCastSfx => null;
+	public override string? CustomCastSfx => null;
 
-	public virtual string? CustomDeathSfx => null;
+	public override string? CustomDeathSfx => null;
 
 	public virtual IEnumerable<string> ExtraCustomAssetPaths => [];
 

@@ -32,7 +32,7 @@ internal static class IllaoiMechanics
 			return;
 		}
 
-		CombatState? combatState = player.Creature.CombatState;
+		ICombatState? combatState = player.Creature.CombatState;
 		List<Vector2> occupiedTentacleOffsets = GetLivingTentacles(player)
 			.Select(static creature => ((IllaoiTentacleMonster)creature.Monster!).VisualOffset)
 			.ToList();
@@ -99,7 +99,7 @@ internal static class IllaoiMechanics
 
 	public static Task CommandTentaclesAtRandomEnemy(PlayerChoiceContext choiceContext, Player player, CardModel? cardSource)
 	{
-		CombatState? combatState = player.Creature.CombatState;
+		ICombatState? combatState = player.Creature.CombatState;
 		if (combatState == null || player.Creature.IsDead)
 		{
 			return Task.CompletedTask;
@@ -119,7 +119,7 @@ internal static class IllaoiMechanics
 
 	public static async Task CommandAllHuskTargets(PlayerChoiceContext choiceContext, Player player, CardModel? cardSource)
 	{
-		CombatState? combatState = player.Creature.CombatState;
+		ICombatState? combatState = player.Creature.CombatState;
 		if (combatState == null || player.Creature.IsDead)
 		{
 			return;
@@ -322,7 +322,7 @@ internal static class IllaoiMechanics
 
 	public static async Task AttackHuskTargetsAtTurnEnd(PlayerChoiceContext choiceContext, Player player)
 	{
-		CombatState? combatState = player.Creature.CombatState;
+		ICombatState? combatState = player.Creature.CombatState;
 		if (combatState == null || player.Creature.IsDead)
 		{
 			return;
@@ -351,7 +351,7 @@ internal static class IllaoiMechanics
 	public static async Task<Creature?> SummonSoul(PlayerChoiceContext choiceContext, Player player, Creature target, CardModel cardSource)
 	{
 		Creature body = ResolveBodyTarget(target);
-		CombatState? combatState = player.Creature.CombatState;
+		ICombatState? combatState = player.Creature.CombatState;
 		if (combatState == null || body.IsDead)
 		{
 			return null;
@@ -439,7 +439,7 @@ internal static class IllaoiMechanics
 
 	public static async Task RemoveExistingSoul(PlayerChoiceContext choiceContext, Player player)
 	{
-		CombatState? combatState = player.Creature.CombatState;
+		ICombatState? combatState = player.Creature.CombatState;
 		if (combatState == null)
 		{
 			return;

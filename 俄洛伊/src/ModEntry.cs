@@ -105,9 +105,6 @@ public static class ModEntry
 		}
 
 		HooksInstalled = true;
-		harmony.Patch(
-			RequireGetter(typeof(ModelDb), nameof(ModelDb.AllCharacters), BindingFlags.Static | BindingFlags.Public),
-			postfix: new HarmonyMethod(RequirePatchMethod(nameof(AllCharactersPostfix))));
 		PatchAncientDialogues<Neow>(harmony, nameof(NeowDefineDialoguesPostfix));
 		PatchAncientDialogues<Darv>(harmony, nameof(DarvDefineDialoguesPostfix));
 		PatchAncientDialogues<Nonupeipe>(harmony, nameof(NonupeipeDefineDialoguesPostfix));
@@ -178,24 +175,6 @@ public static class ModEntry
 		}
 
 		Log.Warn($"{ModInfo.LogPrefix} Could not find {typeof(TAncient).Name}.DefineDialogues; Illaoi dialogue will not be registered.");
-	}
-
-	private static void AllCharactersPostfix(ref IEnumerable<CharacterModel> __result)
-	{
-		__result = AppendIllaoiCharacter(__result);
-	}
-
-	private static IEnumerable<CharacterModel> AppendIllaoiCharacter(IEnumerable<CharacterModel> original)
-	{
-		foreach (CharacterModel character in original)
-		{
-			yield return character;
-		}
-
-		if (ModelDb.Contains(typeof(IllaoiCharacter)))
-		{
-			yield return ModelDb.Character<IllaoiCharacter>();
-		}
 	}
 
 	private static void NeowDefineDialoguesPostfix(AncientDialogueSet __result)

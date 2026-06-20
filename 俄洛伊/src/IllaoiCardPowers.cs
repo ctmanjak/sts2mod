@@ -23,7 +23,7 @@ internal static class IllaoiHoverTips
 		{
 			Id = power.Id.ToString(),
 			IsDebuff = power.Type == PowerType.Debuff,
-			IsInstanced = power.IsInstanced,
+			IsInstanced = power.InstanceType != PowerInstanceType.None,
 			IsSmart = false
 		};
 
@@ -31,7 +31,7 @@ internal static class IllaoiHoverTips
 	}
 }
 
-public abstract class IllaoiTemporaryStatPower<TStatPower> : PowerModel, ITemporaryPower where TStatPower : PowerModel
+public abstract class IllaoiTemporaryStatPower<TStatPower> : IllaoiPowerBase, ITemporaryPower where TStatPower : PowerModel
 {
 	private bool _shouldIgnoreNextInstance;
 
@@ -104,23 +104,14 @@ public sealed class IllaoiTemporaryDexterityPower : IllaoiTemporaryStatPower<Dex
 	protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<DexterityPower>()];
 }
 
-public sealed class IllaoiFaithPower : PowerModel
+public sealed class IllaoiFaithPower : IllaoiPowerBase
 {
 	public override PowerType Type => PowerType.Buff;
 
 	public override PowerStackType StackType => PowerStackType.Counter;
 }
 
-public sealed class IllaoiGrowTipPower : PowerModel
-{
-	public override PowerType Type => PowerType.Buff;
-
-	public override PowerStackType StackType => PowerStackType.Counter;
-
-	protected override bool IsVisibleInternal => false;
-}
-
-public sealed class IllaoiTentacleTipPower : PowerModel
+public sealed class IllaoiGrowTipPower : IllaoiPowerBase
 {
 	public override PowerType Type => PowerType.Buff;
 
@@ -129,7 +120,7 @@ public sealed class IllaoiTentacleTipPower : PowerModel
 	protected override bool IsVisibleInternal => false;
 }
 
-public sealed class IllaoiCommandTipPower : PowerModel
+public sealed class IllaoiTentacleTipPower : IllaoiPowerBase
 {
 	public override PowerType Type => PowerType.Buff;
 
@@ -138,7 +129,16 @@ public sealed class IllaoiCommandTipPower : PowerModel
 	protected override bool IsVisibleInternal => false;
 }
 
-public sealed class IllaoiDrainPower : PowerModel
+public sealed class IllaoiCommandTipPower : IllaoiPowerBase
+{
+	public override PowerType Type => PowerType.Buff;
+
+	public override PowerStackType StackType => PowerStackType.Counter;
+
+	protected override bool IsVisibleInternal => false;
+}
+
+public sealed class IllaoiDrainPower : IllaoiPowerBase
 {
 	public override PowerType Type => PowerType.Buff;
 
@@ -156,7 +156,7 @@ public sealed class IllaoiDrainPower : PowerModel
 	}
 }
 
-public sealed class IllaoiAncientGodProphetPower : PowerModel
+public sealed class IllaoiAncientGodProphetPower : IllaoiPowerBase
 {
 	[SavedProperty(SerializationCondition.SaveIfNotTypeDefault)]
 	public bool Illaoi_TriggeredThisTurn { get; set; }
@@ -165,7 +165,7 @@ public sealed class IllaoiAncientGodProphetPower : PowerModel
 
 	public override PowerStackType StackType => PowerStackType.Counter;
 
-	public override Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+	public override Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
 	{
 		if (side == Owner.Side)
 		{
@@ -188,7 +188,7 @@ public sealed class IllaoiAncientGodProphetPower : PowerModel
 	}
 }
 
-public sealed class IllaoiSoulImpactPower : PowerModel
+public sealed class IllaoiSoulImpactPower : IllaoiPowerBase
 {
 	public override PowerType Type => PowerType.Buff;
 
@@ -213,7 +213,7 @@ public sealed class IllaoiSoulImpactPower : PowerModel
 	}
 }
 
-public sealed class IllaoiNagakabourosDescendsPower : PowerModel
+public sealed class IllaoiNagakabourosDescendsPower : IllaoiPowerBase
 {
 	[SavedProperty(SerializationCondition.SaveIfNotTypeDefault)]
 	public bool Illaoi_TriggeredThisTurn { get; set; }
@@ -222,7 +222,7 @@ public sealed class IllaoiNagakabourosDescendsPower : PowerModel
 
 	public override PowerStackType StackType => PowerStackType.Counter;
 
-	public override Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+	public override Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
 	{
 		if (side == Owner.Side)
 		{
@@ -249,7 +249,7 @@ public sealed class IllaoiNagakabourosDescendsPower : PowerModel
 	}
 }
 
-public sealed class IllaoiTidecallerPower : PowerModel
+public sealed class IllaoiTidecallerPower : IllaoiPowerBase
 {
 	[SavedProperty(SerializationCondition.SaveIfNotTypeDefault)]
 	public bool Illaoi_TriggeredThisTurn { get; set; }
@@ -258,7 +258,7 @@ public sealed class IllaoiTidecallerPower : PowerModel
 
 	public override PowerStackType StackType => PowerStackType.Counter;
 
-	public override Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+	public override Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
 	{
 		if (side == Owner.Side)
 		{
@@ -281,7 +281,7 @@ public sealed class IllaoiTidecallerPower : PowerModel
 	}
 }
 
-public sealed class IllaoiRelentlessFaithPower : PowerModel
+public sealed class IllaoiRelentlessFaithPower : IllaoiPowerBase
 {
 	[SavedProperty(SerializationCondition.SaveIfNotTypeDefault)]
 	public int Illaoi_TriggersUsedThisTurn { get; set; }
@@ -290,7 +290,7 @@ public sealed class IllaoiRelentlessFaithPower : PowerModel
 
 	public override PowerStackType StackType => PowerStackType.Counter;
 
-	public override Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+	public override Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
 	{
 		if (side == Owner.Side)
 		{
@@ -322,7 +322,7 @@ public sealed class IllaoiRelentlessFaithPower : PowerModel
 	}
 }
 
-public sealed class IllaoiGrowthBlockPower : PowerModel
+public sealed class IllaoiGrowthBlockPower : IllaoiPowerBase
 {
 	public override PowerType Type => PowerType.Buff;
 
@@ -340,7 +340,7 @@ public sealed class IllaoiGrowthBlockPower : PowerModel
 	}
 }
 
-public sealed class IllaoiRhythmOfMotionPower : PowerModel
+public sealed class IllaoiRhythmOfMotionPower : IllaoiPowerBase
 {
 	[SavedProperty(SerializationCondition.SaveIfNotTypeDefault)]
 	public bool Illaoi_TriggeredThisTurn { get; set; }
@@ -349,7 +349,7 @@ public sealed class IllaoiRhythmOfMotionPower : PowerModel
 
 	public override PowerStackType StackType => PowerStackType.Counter;
 
-	public override Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+	public override Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
 	{
 		if (side == Owner.Side)
 		{
@@ -376,7 +376,7 @@ public sealed class IllaoiRhythmOfMotionPower : PowerModel
 	}
 }
 
-public sealed class IllaoiFervorOfMotionPower : PowerModel
+public sealed class IllaoiFervorOfMotionPower : IllaoiPowerBase
 {
 	[SavedProperty(SerializationCondition.SaveIfNotTypeDefault)]
 	public bool Illaoi_TriggeredThisTurn { get; set; }
@@ -385,7 +385,7 @@ public sealed class IllaoiFervorOfMotionPower : PowerModel
 
 	public override PowerStackType StackType => PowerStackType.Counter;
 
-	public override Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+	public override Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
 	{
 		if (side == Owner.Side)
 		{
@@ -412,7 +412,7 @@ public sealed class IllaoiFervorOfMotionPower : PowerModel
 	}
 }
 
-public sealed class IllaoiWatchfulIdolPower : PowerModel
+public sealed class IllaoiWatchfulIdolPower : IllaoiPowerBase
 {
 	[SavedProperty(SerializationCondition.SaveIfNotTypeDefault)]
 	public bool Illaoi_TriggeredThisTurn { get; set; }
@@ -421,7 +421,7 @@ public sealed class IllaoiWatchfulIdolPower : PowerModel
 
 	public override PowerStackType StackType => PowerStackType.Counter;
 
-	public override Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+	public override Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
 	{
 		if (side == Owner.Side)
 		{
@@ -449,7 +449,7 @@ public sealed class IllaoiWatchfulIdolPower : PowerModel
 	}
 }
 
-public sealed class IllaoiSeaAnswersPower : PowerModel
+public sealed class IllaoiSeaAnswersPower : IllaoiPowerBase
 {
 	[SavedProperty(SerializationCondition.SaveIfNotTypeDefault)]
 	public int Illaoi_CardsPlayedThisTurn { get; set; }
@@ -473,13 +473,13 @@ public sealed class IllaoiSeaAnswersPower : PowerModel
 	}
 }
 
-public sealed class IllaoiNextTurnDrawPower : PowerModel
+public sealed class IllaoiNextTurnDrawPower : IllaoiPowerBase
 {
 	public override PowerType Type => PowerType.Buff;
 
 	public override PowerStackType StackType => PowerStackType.Counter;
 
-	public override async Task BeforeSideTurnStart(PlayerChoiceContext choiceContext, CombatSide side, CombatState combatState)
+	public override async Task BeforeSideTurnStart(PlayerChoiceContext choiceContext, CombatSide side, ICombatState combatState)
 	{
 		Player? player = Owner.Player;
 		if (side != Owner.Side || Owner.IsDead || Amount <= 0 || player == null)
@@ -493,13 +493,13 @@ public sealed class IllaoiNextTurnDrawPower : PowerModel
 	}
 }
 
-public sealed class IllaoiDivineFormPower : PowerModel
+public sealed class IllaoiDivineFormPower : IllaoiPowerBase
 {
 	public override PowerType Type => PowerType.Buff;
 
 	public override PowerStackType StackType => PowerStackType.Counter;
 
-	public override async Task AfterSideTurnStart(CombatSide side, CombatState combatState)
+	public override async Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
 	{
 		Player? player = Owner.Player;
 		if (side != Owner.Side || Owner.IsDead || Amount <= 0 || player == null)
@@ -513,13 +513,13 @@ public sealed class IllaoiDivineFormPower : PowerModel
 	}
 }
 
-public sealed class IllaoiNextTurnFaithPower : PowerModel
+public sealed class IllaoiNextTurnFaithPower : IllaoiPowerBase
 {
 	public override PowerType Type => PowerType.Buff;
 
 	public override PowerStackType StackType => PowerStackType.Counter;
 
-	public override async Task BeforeSideTurnStart(PlayerChoiceContext choiceContext, CombatSide side, CombatState combatState)
+	public override async Task BeforeSideTurnStart(PlayerChoiceContext choiceContext, CombatSide side, ICombatState combatState)
 	{
 		if (side != Owner.Side || Owner.IsDead || Amount <= 0)
 		{
